@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!--[CDATA[<sc-helmet-->
+<meta name="design_doc_mode" content="canvas">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300..700;1,400&amp;family=Bowlby+One+SC&amp;family=Instrument+Serif:ital@0;1&amp;display=swap" rel="stylesheet">
+<style>
+  body { margin:0; background:#E7E1D2; font-family:'Jost',system-ui,sans-serif; -webkit-font-smoothing:antialiased; }
+  a { color:#7A5F1E; text-decoration:none; }
+  a:hover { color:#4A4526; }
+  ::selection { background:#B08A2E; color:#FBF8F0; }
+</style>
+
+
+<div ref="{{ rootRef }}" style="display:flex; flex-direction:column; gap:64px; padding:56px 64px 120px; color:#33301A;">
+
+  <div style="display:flex; flex-wrap:wrap; align-items:flex-end; justify-content:space-between; gap:24px; max-width:1440px;">
+    <div style="display:flex; flex-direction:column; gap:10px;">
+      <div style="font-family:'Bowlby One SC',serif; font-size:34px; letter-spacing:0.06em; color:#4A4526;">SAUER</div>
+      <div style="font-size:15px; letter-spacing:0.16em; text-transform:uppercase; color:#7A7457;" data-en="Informational site — one product, Instagram orders">Informacinis puslapis — vienas produktas, užsakymai per Instagram</div>
+    </div>
+    <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+      <a href="#home" style="padding:9px 16px; border:1px solid #C7BFA6; border-radius:999px; font-size:14px; letter-spacing:0.04em;">01 Pradinis</a>
+      <a href="#product" style="padding:9px 16px; border:1px solid #C7BFA6; border-radius:999px; font-size:14px; letter-spacing:0.04em;">02 Produktas</a>
+      <a href="#delivery" style="padding:9px 16px; border:1px solid #C7BFA6; border-radius:999px; font-size:14px; letter-spacing:0.04em;">03 Pristatymas</a>
+      <a href="#faq" style="padding:9px 16px; border:1px solid #C7BFA6; border-radius:999px; font-size:14px; letter-spacing:0.04em;">04 DUK</a>
+      <button onClick="{{ toggleLang }}" style="padding:9px 16px; border:1px solid #4A4526; background:#4A4526; color:#F4EEDF; border-radius:999px; font-size:14px; letter-spacing:0.08em; cursor:pointer;">{{ langLabel }}</button>
+    </div>
+  </div>
+
+  <!-- ============ 01 HOME ============ -->
+  <section id="home" data-screen-label="01 Home">
+    <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:18px;">
+      <span style="font-family:'Bowlby One SC',serif; font-size:15px; color:#B08A2E;">01</span>
+      <h2 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:30px; color:#4A4526;" data-en="Home">Pradinis</h2>
+      <span style="font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:#8A8368;">1440 × desktop</span>
+    </div>
+
+    <div style="width:1440px; background:#FBF8F0; border:1px solid #D6CDB4; border-radius:6px; overflow:hidden; box-shadow:0 30px 60px -40px rgba(51,48,26,0.5);">
+
+      <div style="background:#33301A; color:#E4DCC2; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; text-align:center; padding:10px;" data-en="Small-batch fermented vegetables · Made in Lithuania">Mažomis partijomis raugintos daržovės · Pagaminta Lietuvoje</div>
+
+      <header style="display:flex; align-items:center; justify-content:space-between; gap:32px; padding:20px 48px; background:#FBF8F0; border-bottom:1px solid #E4DCC2;">
+        <nav style="display:flex; gap:28px; font-size:15px; letter-spacing:0.06em; text-transform:uppercase; color:#4A4526;">
+          <a href="#product" style="color:#4A4526;" data-en="Product">Produktas</a>
+          <a href="#delivery" style="color:#4A4526;" data-en="Delivery">Pristatymas</a>
+          <a href="#faq" style="color:#4A4526;" data-en="About us">Apie mus</a>
+        </nav>
+        <div style="font-family:'Bowlby One SC',serif; font-size:28px; letter-spacing:0.05em; color:#4A4526;">SAUER</div>
+        <div style="display:flex; align-items:center; gap:22px; font-size:15px; color:#4A4526;">
+          <span style="letter-spacing:0.1em;">LT / EN</span>
+          <a href="https://instagram.com/sauer_darzoves" style="padding:10px 20px; background:#4A4526; color:#F4EEDF; border-radius:999px; font-size:14px; letter-spacing:0.08em; text-transform:uppercase;" data-en="Order on Instagram">Užsisakyti Instagram</a>
+        </div>
+      </header>
+
+      <div style="position:relative; height:680px; display:flex; align-items:flex-end;">
+        <img src="img/hero.jpg" alt="Raugintos daržovės ant šakutės" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 32%; display:block;">
+        <div style="position:absolute; inset:0; background:linear-gradient(90deg,rgba(10,9,6,0.88) 0%,rgba(10,9,6,0.55) 46%,rgba(10,9,6,0.05) 72%);"></div>
+        <div style="position:relative; padding:0 48px 76px; max-width:860px; display:flex; flex-direction:column; gap:26px;">
+          <span style="font-size:13px; letter-spacing:0.24em; text-transform:uppercase; color:#D9B85C;" data-en="Sauer – fermented vegetables">Sauer – raugintos daržovės</span>
+          <h1 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:82px; line-height:1; color:#F7F2E4; text-wrap:pretty;" data-en="Brighter flavour. A better bite.">Ryškesniam skoniui. Geresniam kąsniui.</h1>
+          <p style="margin:0; font-size:19px; line-height:1.55; color:#DDD4B8; max-width:560px; text-wrap:pretty;" data-en="Sauer is fermented vegetables made to turn a simple dish into a more interesting one. Crunchy, gently sour and full of flavour — the accent a plate sometimes lacks.">Sauer – tai fermentuotos daržovės, sukurtos tam, kad paprastą patiekalą paverstų įdomesniu. Traškios, rūgštelėjusios ir kupinos skonio – jos tampa tuo akcentu, kurio kartais trūksta lėkštėje.</p>
+          <div style="display:flex; align-items:center; gap:18px;">
+            <a href="#product" style="padding:17px 36px; background:#D9B85C; color:#33301A; border-radius:999px; font-size:16px; letter-spacing:0.1em; text-transform:uppercase;" data-en="See the product">Apie produktą</a>
+            <span style="font-size:17px; color:#F4EEDF;">500 g · 5 €</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:#E4DCC2; border-bottom:1px solid #E4DCC2;">
+        <div style="background:#F4EEDF; padding:26px 32px; display:flex; flex-direction:column; gap:6px;">
+          <span style="font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#9A7C2A;" data-en="Living bacteria">Gyvos bakterijos</span>
+          <span style="font-size:16px; color:#4A4526;" data-en="Four good lactic acid bacteria">4 gerosios pieno rūgšties bakterijos</span>
+        </div>
+        <div style="background:#F4EEDF; padding:26px 32px; display:flex; flex-direction:column; gap:6px;">
+          <span style="font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#9A7C2A;" data-en="Handmade product">Rankų darbo produktas</span>
+          <span style="font-size:16px; color:#4A4526;" data-en="Fermented in small batches">Rauginama mažomis partijomis</span>
+        </div>
+        <div style="background:#F4EEDF; padding:26px 32px; display:flex; flex-direction:column; gap:6px;">
+          <span style="font-size:13px; letter-spacing:0.16em; text-transform:uppercase; color:#9A7C2A;" data-en="Kaunas &amp; Vilnius">Kaunas ir Vilnius</span>
+          <span style="font-size:16px; color:#4A4526;" data-en="Free pickup or local delivery">Nemokamas atsiėmimas ar pristatymas</span>
+        </div>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1fr 1.1fr; align-items:stretch;">
+        <div style="padding:76px 48px; display:flex; flex-direction:column; gap:22px; justify-content:center;">
+          <span style="font-size:13px; letter-spacing:0.24em; text-transform:uppercase; color:#9A7C2A;" data-en="One product">Vienas produktas</span>
+          <h2 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:54px; line-height:1.04; color:#4A4526;">SAUER Side Mix</h2>
+          <p style="margin:0; font-size:18px; line-height:1.65; color:#5C5740; max-width:520px; text-wrap:pretty;" data-en="Put it next to meat, fish or grilled dishes, use it in burgers, sandwiches and salads — or just eat it on its own.">Dėkite šalia mėsos, žuvies ar grilio patiekalų, naudokite burgeriams, sumuštiniams, salotoms arba tiesiog valgykite vienas.</p>
+          <div style="display:flex; align-items:baseline; gap:16px;">
+            <span style="font-size:34px; color:#33301A;">5 €</span>
+            <span style="font-size:16px; color:#8A8368;" data-en="500 g pack, 350 g vegetables">500 g pakuotė, 350 g daržovių</span>
+          </div>
+          <div style="display:flex; gap:14px; flex-wrap:wrap;">
+            <a href="#product" style="padding:15px 30px; background:#4A4526; color:#F4EEDF; border-radius:999px; font-size:15px; letter-spacing:0.1em; text-transform:uppercase;" data-en="Product details">Sudėtis ir laikymas</a>
+            <a href="https://instagram.com/sauer_darzoves" style="padding:15px 30px; border:1px solid #4A4526; color:#4A4526; border-radius:999px; font-size:15px; letter-spacing:0.1em; text-transform:uppercase;" data-en="Write on Instagram">Rašyti Instagram</a>
+          </div>
+        </div>
+        <div style="min-height:520px; background:#EFEDE6;">
+          <img src="img/bowl-fork2.jpg" alt="Raugintų daržovių lėkštė" style="width:100%; height:100%; object-fit:cover; display:block;">
+        </div>
+      </div>
+
+      <div style="padding:76px 48px 72px; border-top:1px solid #E4DCC2; display:flex; flex-direction:column; gap:36px;">
+        <div style="display:flex; align-items:flex-end; justify-content:space-between; gap:32px; flex-wrap:wrap;">
+          <h2 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:54px; line-height:1.04; color:#4A4526;" data-en="Not just with meat">Ne tik prie mėsos</h2>
+          <p style="margin:0; max-width:520px; font-size:17px; line-height:1.6; color:#6B6550; text-wrap:pretty;" data-en="The first pairing that comes to mind is meat and fermented vegetables, but Sauer can travel much further.">Nors pirmas derinys, kuris ateina į galvą, yra mėsa ir raugintos daržovės, Sauer gali keliauti kur kas toliau.</p>
+        </div>
+        <div style="display:grid; grid-template-columns:repeat(5,1fr); gap:1px; background:#E4DCC2; border:1px solid #E4DCC2;">
+          <div style="background:#FBF8F0; padding:30px 26px; display:flex; flex-direction:column; gap:10px;">
+            <span style="font-size:22px; color:#33301A;" data-en="With the grill">Prie grilio</span>
+            <span style="font-size:15px; line-height:1.55; color:#6B6550;" data-en="When you need acidity to balance a richer, fattier taste.">Kai reikia rūgštelės, kuri subalansuotų riebesnį ir sodresnį skonį.</span>
+          </div>
+          <div style="background:#FBF8F0; padding:30px 26px; display:flex; flex-direction:column; gap:10px;">
+            <span style="font-size:22px; color:#33301A;" data-en="In a burger">Į burgerį</span>
+            <span style="font-size:15px; line-height:1.55; color:#6B6550;" data-en="Instead of the usual pickles — or alongside them.">Vietoj įprastų marinuotų agurkėlių arba kartu su jais.</span>
+          </div>
+          <div style="background:#FBF8F0; padding:30px 26px; display:flex; flex-direction:column; gap:10px;">
+            <span style="font-size:22px; color:#33301A;" data-en="With fish">Prie žuvies</span>
+            <span style="font-size:15px; line-height:1.55; color:#6B6550;" data-en="Acidity and crunch give the dish more life.">Rūgštelė ir traškumas suteikia patiekalui daugiau gyvumo.</span>
+          </div>
+          <div style="background:#FBF8F0; padding:30px 26px; display:flex; flex-direction:column; gap:10px;">
+            <span style="font-size:22px; color:#33301A;" data-en="In salads">Į salotas</span>
+            <span style="font-size:15px; line-height:1.55; color:#6B6550;" data-en="When you want a real flavour accent, not another dressing.">Kai norisi ne dar vieno padažo, o tikro skonio akcento.</span>
+          </div>
+          <div style="background:#F4EEDF; padding:30px 26px; display:flex; flex-direction:column; gap:10px;">
+            <span style="font-size:22px; color:#33301A;" data-en="Straight from the pack">Tiesiog iš pakuotės</span>
+            <span style="font-size:15px; line-height:1.55; color:#6B6550;" data-en="Because sometimes the best use is the simplest one.">Nes kartais geriausias panaudojimas yra pats paprasčiausias.</span>
+          </div>
+        </div>
+        <span style="font-size:19px; color:#9A7C2A; letter-spacing:0.02em;" data-en="Crunchy. Sour. Bright. And very easy to match with everyday food.">Trašku. Rūgštu. Ryšku. Ir labai lengva priderinti prie kasdienio maisto.</span>
+      </div>
+
+      <div style="display:grid; grid-template-columns:1.05fr 1fr; background:#4A4526;">
+        <div style="padding:80px 48px; display:flex; flex-direction:column; gap:22px; justify-content:center;">
+          <span style="font-size:13px; letter-spacing:0.24em; text-transform:uppercase; color:#D9B85C;" data-en="Why Sauer?">Kodėl Sauer?</span>
+          <h2 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:50px; line-height:1.05; color:#F7F2E4;" data-en="Fermenting is not a new trend.">Rauginimas – ne nauja mada.</h2>
+          <p style="margin:0; max-width:520px; font-size:17px; line-height:1.65; color:#DDD4B8; text-wrap:pretty;" data-en="It is an old, time-tested way of fermenting vegetables that gives them a distinctive flavour and character. Sauer vegetables are fermented with lactic acid bacteria cultures: during fermentation they gain a pleasant sourness, a more expressive taste, and stay crunchy.">Tai senas, laiko patikrintas daržovių fermentavimo būdas, suteikiantis joms išskirtinį skonį ir charakterį. Sauer daržovės fermentuojamos pieno rūgšties bakterijų kultūromis – fermentacijos metu daržovės įgauna malonią rūgštelę, išraiškingesnį skonį ir išlieka traškios.</p>
+          <a href="#faq" style="align-self:flex-start; padding:15px 30px; border:1px solid #D9B85C; color:#F7F2E4; border-radius:999px; font-size:15px; letter-spacing:0.1em; text-transform:uppercase;" data-en="Read the process">Apie procesą</a>
+        </div>
+        <div style="min-height:440px; background:#3D3920;">
+          <img src="img/bowl.jpg" alt="Raugintos daržovės dubenyje" style="width:100%; height:100%; object-fit:cover; display:block;">
+        </div>
+      </div>
+
+      <footer style="background:#33301A; color:#CFC7AB; padding:56px 48px 40px; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px;">
+        <div style="display:flex; flex-direction:column; gap:14px;">
+          <span style="font-family:'Bowlby One SC',serif; font-size:26px; letter-spacing:0.05em; color:#F4EEDF;">SAUER</span>
+          <span style="font-size:15px; line-height:1.6;" data-en="Fermented vegetables that not only fill the plate but give it more flavour. Made in Lithuania.">Raugintos daržovės, kurios ne tik papildo lėkštę, bet ir suteikia jai daugiau skonio. Pagaminta Lietuvoje.</span>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px; font-size:15px;">
+          <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#8A8368;" data-en="Information">Informacija</span>
+          <a href="#product" style="color:#CFC7AB;" data-en="Product">Produktas</a>
+          <a href="#delivery" style="color:#CFC7AB;" data-en="Delivery &amp; pickup">Pristatymas ir atsiėmimas</a>
+          <a href="#faq" style="color:#CFC7AB;" data-en="FAQ">DUK</a>
+        </div>
+        <div style="display:flex; flex-direction:column; gap:10px; font-size:15px;">
+          <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#8A8368;" data-en="Contact">Kontaktai</span>
+          <a href="https://instagram.com/sauer_darzoves" style="color:#CFC7AB;">Instagram @sauer_darzoves</a>
+          <span>Facebook: Sauer Daržovės</span>
+          <span>www.sauer.lt</span>
+        </div>
+      </footer>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:12px; margin-top:32px;">
+      <span style="font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:#8A8368;">390 × mobile</span>
+      <div style="width:390px; background:#FBF8F0; border:1px solid #D6CDB4; border-radius:32px; overflow:hidden;">
+        <div style="height:34px; background:#33301A;"></div>
+        <div style="background:#33301A; color:#E4DCC2; font-size:11px; letter-spacing:0.1em; text-transform:uppercase; text-align:center; padding:8px;" data-en="Made in Lithuania">Pagaminta Lietuvoje</div>
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:14px 20px; border-bottom:1px solid #E4DCC2;">
+          <span style="font-size:20px; color:#4A4526; min-width:44px; min-height:44px; display:flex; align-items:center;">☰</span>
+          <span style="font-family:'Bowlby One SC',serif; font-size:19px; letter-spacing:0.05em; color:#4A4526;">SAUER</span>
+          <span style="min-width:44px; min-height:44px; display:flex; align-items:center; justify-content:flex-end; font-size:13px; letter-spacing:0.08em; color:#4A4526;">LT</span>
+        </div>
+        <div style="position:relative; height:470px; display:flex; align-items:flex-end;">
+          <img src="img/hero.jpg" alt="Raugintos daržovės ant šakutės" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center 30%; display:block;">
+          <div style="position:absolute; inset:0; background:linear-gradient(180deg,rgba(10,9,6,0.15) 0%,rgba(10,9,6,0.85) 100%);"></div>
+          <div style="position:relative; padding:0 20px 26px; display:flex; flex-direction:column; gap:14px;">
+            <span style="font-size:11px; letter-spacing:0.22em; text-transform:uppercase; color:#D9B85C;" data-en="Sauer – fermented vegetables">Sauer – raugintos daržovės</span>
+            <h1 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:38px; line-height:1.02; color:#F7F2E4; text-wrap:pretty;" data-en="Brighter flavour. A better bite.">Ryškesniam skoniui. Geresniam kąsniui.</h1>
+            <span style="font-size:15px; color:#F4EEDF;">SAUER Side Mix · 500 g · 5 €</span>
+            <a href="#product" style="align-self:flex-start; padding:0 26px; min-height:44px; display:flex; align-items:center; background:#D9B85C; color:#33301A; border-radius:999px; font-size:14px; letter-spacing:0.1em; text-transform:uppercase;" data-en="See the product">Apie produktą</a>
+          </div>
+        </div>
+        <div style="padding:20px; display:flex; flex-direction:column; gap:14px;">
+          <span style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#9A7C2A;" data-en="One product">Vienas produktas</span>
+          <h2 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:32px; color:#4A4526;">SAUER Side Mix</h2>
+          <p style="margin:0; font-size:15px; line-height:1.55; color:#5C5740; text-wrap:pretty;" data-en="Carrot, cauliflower, celery, white radish, peppers, garlic and chilli in brine.">Morkos, kalafiorai, salierai, baltasis ridikas, paprikos, česnakai ir aitrioji paprika sūryme.</p>
+          <div style="display:flex; align-items:baseline; gap:12px;">
+            <span style="font-size:26px; color:#33301A;">5 €</span>
+            <span style="font-size:14px; color:#8A8368;">500 g</span>
+          </div>
+          <div style="border-radius:4px; overflow:hidden; background:#EFEDE6;">
+            <img src="img/bowl-fork2.jpg" alt="Raugintų daržovių lėkštė" style="width:100%; height:230px; object-fit:cover; display:block;">
+          </div>
+          <div style="display:flex; flex-direction:column; gap:12px; padding-top:6px; border-top:1px solid #E4DCC2;">
+            <span style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#9A7C2A;" data-en="Not just with meat">Ne tik prie mėsos</span>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+              <span style="font-size:15px; color:#33301A;" data-en="With the grill — acidity that balances a richer taste.">Prie grilio – rūgštelė, kuri subalansuoja sodresnį skonį.</span>
+              <span style="font-size:15px; color:#33301A;" data-en="In a burger — instead of the usual pickles.">Į burgerį – vietoj įprastų marinuotų agurkėlių.</span>
+              <span style="font-size:15px; color:#33301A;" data-en="With fish — acidity and crunch.">Prie žuvies – rūgštelė ir traškumas.</span>
+              <span style="font-size:15px; color:#33301A;" data-en="In salads — a real flavour accent.">Į salotas – tikras skonio akcentas.</span>
+              <span style="font-size:15px; color:#33301A;" data-en="Straight from the pack.">Tiesiog iš pakuotės.</span>
+            </div>
+          </div>
+        </div>
+        <div style="padding:14px 20px 24px; background:#F4EEDF; border-top:1px solid #E4DCC2; display:flex; flex-direction:column; gap:10px;">
+          <a href="https://instagram.com/sauer_darzoves" style="min-height:44px; display:flex; align-items:center; justify-content:center; background:#4A4526; color:#F4EEDF; border-radius:999px; font-size:14px; letter-spacing:0.1em; text-transform:uppercase;" data-en="Order on Instagram">Užsisakyti Instagram</a>
+          <span style="font-size:12px; text-align:center; color:#8A8368;" data-en="We confirm quantity and time by message">Kiekį ir laiką suderiname žinutėje</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 02 PRODUCT ============ -->
+  <section id="product" data-screen-label="02 Product">
+    <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:18px;">
+      <span style="font-family:'Bowlby One SC',serif; font-size:15px; color:#B08A2E;">02</span>
+      <h2 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:30px; color:#4A4526;" data-en="Product page — Instagram instead of checkout">Produkto puslapis — Instagram vietoje krepšelio</h2>
+    </div>
+    <div style="width:1440px; background:#FBF8F0; border:1px solid #D6CDB4; border-radius:6px; overflow:hidden;">
+      <header style="display:flex; align-items:center; justify-content:space-between; padding:20px 48px; border-bottom:1px solid #E4DCC2;">
+        <nav style="display:flex; gap:28px; font-size:15px; letter-spacing:0.06em; text-transform:uppercase; color:#4A4526;">
+          <a href="#home" style="color:#4A4526;" data-en="Home">Pradinis</a>
+          <a href="#delivery" style="color:#4A4526;" data-en="Delivery">Pristatymas</a>
+          <a href="#faq" style="color:#4A4526;" data-en="About us">Apie mus</a>
+        </nav>
+        <div style="font-family:'Bowlby One SC',serif; font-size:28px; letter-spacing:0.05em; color:#4A4526;">SAUER</div>
+        <a href="https://instagram.com/sauer_darzoves" style="padding:10px 20px; background:#4A4526; color:#F4EEDF; border-radius:999px; font-size:14px; letter-spacing:0.08em; text-transform:uppercase;" data-en="Instagram">Instagram</a>
+      </header>
+
+      <div style="display:grid; grid-template-columns:1fr 1fr;">
+        <div style="display:flex; flex-direction:column; gap:1px; background:#E4DCC2;">
+          <div style="flex:1; min-height:620px; background:#EFEDE6;">
+            <img src="img/pack-shot.jpg" alt="SAUER Side Mix pakuotė" style="width:100%; height:100%; object-fit:contain; display:block;">
+          </div>
+          <div style="flex:none; display:grid; grid-template-columns:repeat(3,1fr); gap:1px;">
+            <div style="height:190px; background:#EFEDE6;"><img src="img/bowl.jpg" alt="Daržovės dubenyje" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+            <div style="height:190px; background:#EFEDE6;"><img src="img/fork.jpg" alt="Daržovės ant šakutės" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+            <div style="height:190px; background:#EFEDE6;"><img src="img/bowl-fork2.jpg" alt="Garnyras lėkštėje" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+          </div>
+        </div>
+
+        <div style="padding:60px 56px; display:flex; flex-direction:column; gap:24px;">
+          <span style="font-size:13px; letter-spacing:0.2em; text-transform:uppercase; color:#9A7C2A;" data-en="Fermented vegetables · 500 g">Raugintos daržovės · 500 g</span>
+          <h1 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:58px; line-height:1; color:#33301A;">SAUER Side Mix</h1>
+          <div style="display:flex; align-items:baseline; gap:14px;">
+            <span style="font-size:32px; color:#4A4526;">5 €</span>
+            <span style="font-size:15px; color:#8A8368;" data-en="500 g pack, 350 g vegetables">500 g pakuotė, iš kurių daržovių 350 g</span>
+          </div>
+          <p style="margin:0; font-size:17px; line-height:1.65; color:#5C5740; max-width:540px; text-wrap:pretty;" data-en="Sauer vegetables are fermented with lactic acid bacteria cultures that ensure the right bacterial activity and a consistent taste. A handmade product, made in Lithuania.">Sauer daržovės rauginamos su pieno rūgšties bakterijų kultūromis, kurios užtikrina teisingą bakterijų veiklą ir pastovų skonį. Rankų darbo produktas, pagamintas Lietuvoje.</p>
+
+          <div style="padding:26px; background:#F4EEDF; border:1px solid #E4DCC2; border-radius:4px; display:flex; flex-direction:column; gap:14px;">
+            <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#8A8368;" data-en="How to order">Kaip užsisakyti</span>
+            <p style="margin:0; font-size:16px; line-height:1.6; color:#4A4526;" data-en="Orders are placed by private message on Instagram or Facebook. Write to us and we will agree on the quantity, pickup or delivery and the final amount.">Užsakymai Instagram arba Facebook platformoje asmenine žinute. Parašyk – suderinsime kiekį, atsiėmimą ar pristatymą bei galutinę sumą.</p>
+            <a href="https://instagram.com/sauer_darzoves" style="align-self:flex-start; padding:18px 34px; background:#D9B85C; color:#33301A; border-radius:999px; font-size:16px; letter-spacing:0.1em; text-transform:uppercase;" data-en="Write on Instagram @sauer_darzoves">Rašyti Instagram @sauer_darzoves</a>
+            <span style="font-size:14px; color:#7A7457;" data-en="Free pickup at an agreed time · Delivery in Kaunas and Vilnius">Nemokamas atsiėmimas suderintu laiku · Pristatymas Kaune ir Vilniuje</span>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:14px;">
+            <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#8A8368;" data-en="Ingredients">Sudėtis</span>
+            <p style="margin:0; font-size:16px; line-height:1.6; color:#5C5740; max-width:540px; text-wrap:pretty;" data-en="Vegetables in varying proportions (carrots, cauliflower, celery, white radish, peppers, garlic, chilli), water, salt, lactic acid bacteria cultures: Lactobacillus plantarum, Lactobacillus fermentum, Lactobacillus brevis, Leuconostoc mesenteroides.">Daržovės įvairiomis proporcijomis (morkos, kalafiorai, salierai, baltasis ridikas, paprikos, česnakai, aitrioji paprika), vanduo, druska, pieno rūgšties bakterijų kultūros: Lactobacillus plantarum, Lactobacillus fermentum, Lactobacillus brevis, Leuconostoc mesenteroides.</p>
+          </div>
+
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:18px; border-top:1px solid #E4DCC2; padding-top:22px;">
+            <div style="display:flex; flex-direction:column; gap:6px;">
+              <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#8A8368;" data-en="Storage">Laikymo sąlygos</span>
+              <span style="font-size:16px; color:#4A4526;" data-en="0–4 °C, keep refrigerated">0–4 °C, laikyti šaldytuve</span>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:6px;">
+              <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#8A8368;" data-en="Best before">Geriausias iki</span>
+              <span style="font-size:16px; color:#4A4526;" data-en="See the pack">Žiūrėti ant pakuotės</span>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:6px;">
+              <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#8A8368;" data-en="Producer ID">Gamintojo ID nr.</span>
+              <span style="font-size:16px; color:#4A4526;">33VTSPI-75</span>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:6px;">
+              <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#8A8368;" data-en="Net weight">Grynasis svoris</span>
+              <span style="font-size:16px; color:#4A4526;" data-en="500 g (350 g vegetables)">500 g (daržovių 350 g)</span>
+            </div>
+            <div style="display:flex; flex-direction:column; gap:6px; grid-column:1 / -1;">
+              <span style="font-size:12px; letter-spacing:0.16em; text-transform:uppercase; color:#8A8368;" data-en="Four good lactic acid bacteria">4 gerosios pieno rūgšties bakterijos</span>
+              <span style="font-size:16px; line-height:1.55; color:#4A4526;">Lactobacillus plantarum, Lactobacillus fermentum, Lactobacillus brevis, Leuconostoc mesenteroides</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="display:flex; flex-direction:column; gap:12px; margin-top:32px;">
+      <span style="font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:#8A8368;">390 × mobile</span>
+      <div style="width:390px; background:#FBF8F0; border:1px solid #D6CDB4; border-radius:32px; overflow:hidden;">
+        <div style="height:34px; background:#33301A;"></div>
+        <div style="display:flex; align-items:center; justify-content:space-between; padding:14px 20px; border-bottom:1px solid #E4DCC2;">
+          <span style="font-size:20px; color:#4A4526; min-width:44px; min-height:44px; display:flex; align-items:center;">←</span>
+          <span style="font-family:'Bowlby One SC',serif; font-size:19px; letter-spacing:0.05em; color:#4A4526;">SAUER</span>
+          <span style="min-width:44px; min-height:44px; display:flex; align-items:center; justify-content:flex-end; font-size:13px; letter-spacing:0.08em; color:#4A4526;">LT</span>
+        </div>
+        <div style="height:360px; background:#EFEDE6;">
+          <img src="img/pack-shot.jpg" alt="SAUER Side Mix pakuotė" style="width:100%; height:100%; object-fit:contain; display:block;">
+        </div>
+        <div style="display:flex; gap:8px; padding:12px 20px;">
+          <div style="flex:1; height:74px; background:#EFEDE6;"><img src="img/bowl.jpg" alt="Dubenyje" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+          <div style="flex:1; height:74px; background:#EFEDE6;"><img src="img/fork.jpg" alt="Ant šakutės" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+          <div style="flex:1; height:74px; background:#EFEDE6;"><img src="img/bowl-fork2.jpg" alt="Garnyras" style="width:100%; height:100%; object-fit:cover; display:block;"></div>
+        </div>
+        <div style="padding:8px 20px 20px; display:flex; flex-direction:column; gap:14px;">
+          <span style="font-size:11px; letter-spacing:0.2em; text-transform:uppercase; color:#9A7C2A;" data-en="Fermented vegetables · 500 g">Raugintos daržovės · 500 g</span>
+          <h1 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:34px; line-height:1.02; color:#33301A;">SAUER Side Mix</h1>
+          <div style="display:flex; align-items:baseline; gap:10px;">
+            <span style="font-size:24px; color:#4A4526;">5 €</span>
+            <span style="font-size:13px; color:#8A8368;" data-en="350 g vegetables">daržovių 350 g</span>
+          </div>
+          <p style="margin:0; font-size:15px; line-height:1.55; color:#5C5740; text-wrap:pretty;" data-en="Fermented with lactic acid bacteria cultures for the right bacterial activity and a consistent taste. Handmade.">Rauginama su pieno rūgšties bakterijų kultūromis – teisinga bakterijų veikla ir pastovus skonis. Rankų darbo produktas.</p>
+          <div style="display:flex; flex-direction:column; gap:6px; padding-top:6px; border-top:1px solid #E4DCC2;">
+            <span style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#8A8368;" data-en="Ingredients">Sudėtis</span>
+            <span style="font-size:14px; line-height:1.55; color:#5C5740;" data-en="Vegetables (carrots, cauliflower, celery, white radish, peppers, garlic, chilli), water, salt, lactic acid bacteria cultures.">Daržovės (morkos, kalafiorai, salierai, baltasis ridikas, paprikos, česnakai, aitrioji paprika), vanduo, druska, pieno rūgšties bakterijų kultūros.</span>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:6px; padding-top:12px; border-top:1px solid #E4DCC2;">
+            <span style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#8A8368;" data-en="Storage">Laikymo sąlygos</span>
+            <span style="font-size:14px; color:#4A4526;" data-en="0–4 °C, keep refrigerated">0–4 °C, laikyti šaldytuve</span>
+          </div>
+        </div>
+        <div style="padding:14px 20px 24px; background:#F4EEDF; border-top:1px solid #E4DCC2; display:flex; flex-direction:column; gap:10px;">
+          <a href="https://instagram.com/sauer_darzoves" style="min-height:44px; display:flex; align-items:center; justify-content:center; background:#D9B85C; color:#33301A; border-radius:999px; font-size:14px; letter-spacing:0.1em; text-transform:uppercase;" data-en="Write on Instagram">Rašyti Instagram</a>
+          <span style="font-size:12px; text-align:center; color:#8A8368;">@sauer_darzoves</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 03 DELIVERY ============ -->
+  <section id="delivery" data-screen-label="03 Delivery &amp; pickup">
+    <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:18px;">
+      <span style="font-family:'Bowlby One SC',serif; font-size:15px; color:#B08A2E;">03</span>
+      <h2 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:30px; color:#4A4526;" data-en="Delivery &amp; pickup">Pristatymas ir atsiėmimas</h2>
+    </div>
+    <div style="display:flex; gap:40px; align-items:flex-start; flex-wrap:wrap;">
+      <div style="width:1200px; background:#FBF8F0; border:1px solid #D6CDB4; border-radius:6px; overflow:hidden;">
+        <header style="display:flex; align-items:center; justify-content:space-between; padding:20px 48px; border-bottom:1px solid #E4DCC2;">
+          <a href="#home" style="font-size:15px; color:#5C5740;" data-en="← Home">← Pradinis</a>
+          <div style="font-family:'Bowlby One SC',serif; font-size:24px; letter-spacing:0.05em; color:#4A4526;">SAUER</div>
+          <a href="https://instagram.com/sauer_darzoves" style="font-size:15px; color:#5C5740;">@sauer_darzoves</a>
+        </header>
+
+        <div style="padding:60px 56px 20px; display:grid; grid-template-columns:1fr 1.15fr; gap:56px; align-items:start;">
+          <div style="display:flex; flex-direction:column; gap:20px;">
+            <h1 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:54px; line-height:1.04; color:#33301A;" data-en="Delivery &amp; pickup">Pristatymas ir atsiėmimas</h1>
+            <p style="margin:0; font-size:17px; line-height:1.6; color:#6B6550; text-wrap:pretty;" data-en="An order is confirmed once SAUER confirms the quantity, the pickup or delivery method and the final amount.">Užsakymas laikomas patvirtintu, kai SAUER patvirtina produkto kiekį, atsiėmimo arba pristatymo būdą ir galutinę užsakymo sumą.</p>
+            <div style="padding:26px; background:#4A4526; color:#F7F2E4; border-radius:4px; display:flex; flex-direction:column; gap:14px;">
+              <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#D9B85C;" data-en="Delivery days">Pristatymo dienos</span>
+              <div style="display:flex; justify-content:space-between; font-size:17px;"><span data-en="Wednesdays, Kaunas">Trečiadieniais, Kaunas</span><span>18:00–20:00</span></div>
+              <div style="display:flex; justify-content:space-between; font-size:17px;"><span data-en="Saturdays, Vilnius">Šeštadieniais, Vilnius</span><span>10:00–14:00</span></div>
+              <span style="font-size:14px; line-height:1.55; color:#DDD4B8;" data-en="To receive an order on the nearest delivery day, place it by 17:00 the previous day.">Norint gauti užsakymą artimiausią pristatymo dieną, jį prašome pateikti ne vėliau kaip iki ankstesnės dienos 17:00 val.</span>
+            </div>
+            <div style="padding:26px; background:#F4EEDF; border:1px solid #E4DCC2; border-radius:4px; display:flex; flex-direction:column; gap:12px;">
+              <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#8A8368;" data-en="Local delivery">Vietinis pristatymas</span>
+              <div style="display:flex; justify-content:space-between; font-size:16px; color:#4A4526;"><span data-en="Minimum order">Minimalus užsakymas</span><span data-en="3 packs / 15 €">3 pakuotės / 15 €</span></div>
+              <div style="display:flex; justify-content:space-between; font-size:16px; color:#4A4526;"><span data-en="Delivery price">Pristatymo kaina</span><span>3 €</span></div>
+              <div style="display:flex; justify-content:space-between; font-size:16px; color:#4A4526;"><span data-en="Orders over 30 €" data-lt="Užsakymams nuo 30 €"><span data-en="Orders over 30 €" data-lt="Užsakymams nuo 30 €">Užsakymams nuo 30 €</span>Nuo 30 € atsiėmimas nemokamai</span></div>
+              <div style="display:flex; justify-content:space-between; font-size:16px; color:#4A4526;"></div>
+            </div>
+          </div>
+
+          <div style="display:flex; flex-direction:column;">
+            <div style="padding:22px 0; border-top:1px solid #E4DCC2; display:flex; flex-direction:column; gap:10px;">
+              <span style="font-size:22px; color:#33301A;" data-en="Pickup">Atsiėmimas</span>
+              <span style="font-size:16px; line-height:1.6; color:#6B6550;" data-en="An order can be picked up free of charge at a time and place agreed in advance. Exact pickup information is provided once the order is confirmed. Please let us know in advance if your pickup time changes.">Užsakymą galima atsiimti nemokamai iš anksto suderintu laiku ir vietoje. Tiksli atsiėmimo informacija pateikiama patvirtinus užsakymą. Prašome apie pasikeitusį atsiėmimo laiką informuoti iš anksto.</span>
+            </div>
+            <div style="padding:22px 0; border-top:1px solid #E4DCC2; display:flex; flex-direction:column; gap:10px;">
+              <span style="font-size:22px; color:#33301A;" data-en="Local delivery">Vietinis pristatymas</span>
+              <span style="font-size:16px; line-height:1.6; color:#6B6550;" data-en="Delivery is made to an address agreed in advance. To plan routes efficiently, deliveries run on set days. During delivery we give an approximate time interval, not an exact time.">Pristatymas vykdomas iš anksto sutartu adresu. Siekiant efektyviai planuoti maršrutus, pristatymai vykdomi nustatytomis dienomis. Pristatymo metu nurodomas apytikslis laiko intervalas, o ne tikslus pristatymo laikas.</span>
+            </div>
+            <div style="padding:22px 0; border-top:1px solid #E4DCC2; display:flex; flex-direction:column; gap:10px;">
+              <span style="font-size:22px; color:#33301A;" data-en="Delivery outside the city">Pristatymas už miesto ribų</span>
+              <span style="font-size:16px; line-height:1.6; color:#6B6550;" data-en="Availability and price beyond the main delivery area are agreed individually, based on the address and order size.">Pristatymo galimybė ir kaina už pagrindinės pristatymo teritorijos ribų derinama individualiai pagal adresą ir užsakymo dydį.</span>
+            </div>
+            <div style="padding:22px 0; border-top:1px solid #E4DCC2; display:flex; flex-direction:column; gap:10px;">
+              <span style="font-size:22px; color:#33301A;" data-en="Order changes">Užsakymo pakeitimai</span>
+              <span style="font-size:16px; line-height:1.6; color:#6B6550;" data-en="If you want to change or cancel an order, please tell us as early as possible. If the order has already been handed over for delivery, changing the delivery time the same day may not be possible.">Jeigu norite pakeisti arba atšaukti užsakymą, prašome apie tai pranešti kuo anksčiau. Jeigu užsakymas jau perduotas pristatymui, pristatymo laiko pakeisti tą pačią dieną gali nepavykti.</span>
+            </div>
+            <div style="padding:22px 0; border-top:1px solid #E4DCC2; display:flex; flex-direction:column; gap:10px;">
+              <span style="font-size:22px; color:#33301A;" data-en="Storing the product">Produkto laikymas</span>
+              <span style="font-size:16px; line-height:1.6; color:#6B6550;" data-en="Once you receive SAUER products, we recommend refrigerating them as soon as possible and storing them according to the conditions on the pack.">Gavus SAUER produktus rekomenduojame juos kuo greičiau įdėti į šaldytuvą ir laikyti pagal ant pakuotės nurodytas laikymo sąlygas.</span>
+            </div>
+            <div style="padding:22px 0; border-top:1px solid #E4DCC2; border-bottom:1px solid #E4DCC2; display:flex; flex-direction:column; gap:10px;">
+              <span style="font-size:22px; color:#33301A;" data-en="Important">Svarbu</span>
+              <span style="font-size:16px; line-height:1.6; color:#6B6550;" data-en="SAUER is a small-scale producer, so products are made in small batches. For this reason the quantity available may be limited on certain days.">SAUER yra mažos apimties gamintojas, todėl produktai gaminami nedidelėmis partijomis. Dėl šios priežasties tam tikromis dienomis produkto kiekis gali būti ribotas.</span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin:20px 56px 56px; padding:28px 32px; background:#33301A; color:#F7F2E4; border-radius:4px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap;">
+          <span style="font-size:19px;" data-en="Questions about pickup or delivery? Write to us.">Klausimai apie atsiėmimą ar pristatymą? Parašyk mums.</span>
+          <a href="https://instagram.com/sauer_darzoves" style="padding:15px 30px; background:#D9B85C; color:#33301A; border-radius:999px; font-size:15px; letter-spacing:0.1em; text-transform:uppercase;" data-en="Instagram @sauer_darzoves">Instagram @sauer_darzoves</a>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <span style="font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:#8A8368;">390 × mobile</span>
+        <div style="width:390px; background:#FBF8F0; border:1px solid #D6CDB4; border-radius:32px; overflow:hidden;">
+          <div style="height:34px; background:#33301A;"></div>
+          <div style="display:flex; align-items:center; justify-content:space-between; padding:14px 20px; border-bottom:1px solid #E4DCC2;">
+            <span style="font-size:20px; color:#4A4526; min-width:44px; min-height:44px; display:flex; align-items:center;">←</span>
+            <span style="font-family:'Bowlby One SC',serif; font-size:19px; letter-spacing:0.05em; color:#4A4526;">SAUER</span>
+            <span style="min-width:44px; min-height:44px;"></span>
+          </div>
+          <div style="padding:20px; display:flex; flex-direction:column; gap:16px;">
+            <h1 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:30px; line-height:1.05; color:#33301A;" data-en="Delivery &amp; pickup">Pristatymas ir atsiėmimas</h1>
+            <div style="padding:18px; background:#4A4526; color:#F7F2E4; border-radius:4px; display:flex; flex-direction:column; gap:10px;" data-comment-anchor="dcd3b5d190-div">
+              <span style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:#D9B85C;" data-en="Delivery days">Pristatymo dienos</span>
+              <div style="display:flex; justify-content:space-between; font-size:15px;"><span>Trečiadieniais, Kaunas</span><span>18:00 – 20:00</span></div>
+              <div style="display:flex; justify-content:space-between; font-size:15px;"><span>Šeštadieniais, Vilnius</span><span>10:00 – 14:00</span></div>
+            </div>
+            <div style="padding:18px; background:#F4EEDF; border:1px solid #E4DCC2; border-radius:4px; display:flex; flex-direction:column; gap:8px;">
+              <div style="display:flex; justify-content:space-between; font-size:15px; color:#4A4526;"><span data-en="Minimum order">Minimalus užsakymas</span><span>3 pak. / 15 €</span></div>
+              <div style="display:flex; justify-content:space-between; font-size:15px; color:#4A4526;"><span data-en="Delivery">Pristatymas</span><span>3 €</span></div>
+              <div style="font-size:15px; color:#4A4526;" data-en="From 30 € and pickup — free"><span data-en="Orders over 30 €" data-lt="Užsakymams nuo 30 €">Užsakymams&nbsp;</span>Nuo 30 € atsiėmimas nemokamai</div>
+            </div>
+            <div style="display:flex; flex-direction:column;">
+              <div style="padding:14px 0; border-top:1px solid #E4DCC2; display:flex; justify-content:space-between; font-size:15px; color:#4A4526;"><span data-en="Pickup">Atsiėmimas</span><span>+</span></div>
+              <div style="padding:14px 0; border-top:1px solid #E4DCC2; display:flex; justify-content:space-between; font-size:15px; color:#4A4526;"><span data-en="Local delivery">Vietinis pristatymas</span><span>+</span></div>
+              <div style="padding:14px 0; border-top:1px solid #E4DCC2; display:flex; justify-content:space-between; font-size:15px; color:#4A4526;"><span data-en="Outside the city">Už miesto ribų</span><span>+</span></div>
+              <div style="padding:14px 0; border-top:1px solid #E4DCC2; display:flex; justify-content:space-between; font-size:15px; color:#4A4526;"><span data-en="Order changes">Užsakymo pakeitimai</span><span>+</span></div>
+              <div style="padding:14px 0; border-top:1px solid #E4DCC2; border-bottom:1px solid #E4DCC2; display:flex; justify-content:space-between; font-size:15px; color:#4A4526;"><span data-en="Storing the product">Produkto laikymas</span><span>+</span></div>
+            </div>
+            <span style="font-size:14px; line-height:1.55; color:#6B6550;" data-en="SAUER is a small-scale producer — on certain days the available quantity may be limited.">SAUER yra mažos apimties gamintojas — tam tikromis dienomis produkto kiekis gali būti ribotas.</span>
+          </div>
+          <div style="padding:14px 20px 24px; background:#F4EEDF; border-top:1px solid #E4DCC2;">
+            <a href="https://instagram.com/sauer_darzoves" style="min-height:44px; display:flex; align-items:center; justify-content:center; background:#4A4526; color:#F4EEDF; border-radius:999px; font-size:14px; letter-spacing:0.1em; text-transform:uppercase;" data-en="Ask on Instagram">Klausti Instagram</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 04 FAQ / ABOUT ============ -->
+  <section id="faq" data-screen-label="04 About &amp; FAQ">
+    <div style="display:flex; align-items:baseline; gap:14px; margin-bottom:18px;">
+      <span style="font-family:'Bowlby One SC',serif; font-size:15px; color:#B08A2E;">04</span>
+      <h2 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:30px; color:#4A4526;" data-en="About &amp; FAQ">Apie mus ir DUK</h2>
+    </div>
+    <div style="width:1200px; background:#FBF8F0; border:1px solid #D6CDB4; border-radius:6px; overflow:hidden;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; align-items:stretch;">
+        <div style="padding:64px 56px; display:flex; flex-direction:column; gap:20px; justify-content:center;">
+          <span style="font-size:13px; letter-spacing:0.2em; text-transform:uppercase; color:#9A7C2A;" data-en="Why Sauer?">Kodėl Sauer?</span>
+          <h1 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:52px; line-height:1.04; color:#33301A;" data-en="Crunchy. Sour. Bright.">Trašku. Rūgštu. Ryšku.</h1>
+          <p style="margin:0; font-size:17px; line-height:1.65; color:#5C5740; text-wrap:pretty;" data-en="Fermented vegetables are not a new trend — it is an old, time-tested way of fermenting vegetables that gives them a distinctive flavour and character. And very easy to match with everyday food.">Raugintos daržovės – tai ne nauja mada. Tai senas, laiko patikrintas daržovių fermentavimo būdas, suteikiantis joms išskirtinį skonį ir charakterį. Ir labai lengva priderinti prie kasdienio maisto.</p>
+        </div>
+        <div style="height:480px; background:#EFEDE6;">
+          <img src="img/fork.jpg" alt="Raugintos daržovės ant šakutės" style="width:100%; height:100%; object-fit:cover; object-position:center 38%; display:block;">
+        </div>
+      </div>
+
+      <div style="padding:56px 56px 40px; display:grid; grid-template-columns:1fr 1.3fr; gap:56px; align-items:start;">
+        <div style="display:flex; flex-direction:column; gap:18px;">
+          <h2 style="margin:0; font-family:'Instrument Serif',serif; font-weight:400; font-size:42px; line-height:1.05; color:#4A4526;" data-en="Questions about live food">Klausimai</h2>
+          <p style="margin:0; font-size:17px; line-height:1.6; color:#6B6550;" data-en="Do not see your answer? Write to us on Instagram — we reply within a working day.">Nerandi atsakymo? Rašyk mums Instagram — atsakome per darbo dieną.</p>
+          <div style="padding:26px; background:#F4EEDF; border:1px solid #E4DCC2; border-radius:4px; display:flex; flex-direction:column; gap:12px;">
+            <span style="font-size:12px; letter-spacing:0.18em; text-transform:uppercase; color:#8A8368;" data-en="Contact">Kontaktai</span>
+            <a href="https://instagram.com/sauer_darzoves" style="font-size:17px; color:#4A4526;">Instagram @sauer_darzoves</a>
+            <span style="font-size:17px; color:#4A4526;">Facebook: Sauer Daržovės</span>
+            <span style="font-size:17px; color:#4A4526;">www.sauer.lt</span>
+          </div>
+        </div>
+        <div style="display:flex; flex-direction:column;">
+          <div style="padding:24px 0; border-top:1px solid #E4DCC2; display:flex; flex-direction:column; gap:8px;">
+            <span style="font-size:20px; color:#33301A;" data-en="How do I order?">Kaip užsisakyti?</span>
+            <span style="font-size:16px; line-height:1.6; color:#6B6550;" data-en="By private message on Instagram or Facebook. In the message we agree on the quantity, pickup or delivery and the final amount.">Instagram arba Facebook platformoje asmenine žinute. Žinutėje suderiname kiekį, atsiėmimą ar pristatymą ir galutinę sumą.</span>
+          </div>
+          <div style="padding:24px 0; border-top:1px solid #E4DCC2; display:flex; flex-direction:column; gap:8px;">
+            <span style="font-size:20px; color:#33301A;" data-en="Does the pack need refrigeration?">Ar pakuotę reikia laikyti šaldytuve?</span>
+            <span style="font-size:16px; line-height:1.6; color:#6B6550;" data-en="Yes — 0–4 °C. Fermentation slows but never stops, so keep it cold and open it over the sink.">Taip — 0–4 °C. Rauginimas sulėtėja, bet nesustoja, todėl laikyk vėsiai ir atidaryk virš kriauklės.</span>
+          </div>
+          <div style="padding:24px 0; border-top:1px solid #E4DCC2; display:flex; flex-direction:column; gap:8px;">
+            <span style="font-size:20px; color:#33301A;" data-en="Is there vinegar or sugar inside?">Ar sudėtyje yra acto ar cukraus?</span>
+            <span style="font-size:16px; line-height:1.6; color:#6B6550;" data-en="No. Only vegetables, water, salt and lactic acid bacteria cultures — four different good bacteria.">Ne. Tik daržovės, vanduo, druska ir pieno rūgšties bakterijų kultūros – 4 skirtingos gerosios bakterijos.</span>
+          </div>
+          <div style="padding:24px 0; border-top:1px solid #E4DCC2; display:flex; flex-direction:column; gap:8px;">
+            <span style="font-size:20px; color:#33301A;" data-en="How do I serve it?">Kaip patiekti?</span>
+            <span style="font-size:16px; line-height:1.6; color:#6B6550;" data-en="Next to grilled food, in a burger instead of pickles, with fish, in salads — or straight from the pack.">Prie grilio, į burgerį vietoj marinuotų agurkėlių, prie žuvies, į salotas – arba tiesiog iš pakuotės.</span>
+          </div>
+          <div style="padding:24px 0; border-top:1px solid #E4DCC2; border-bottom:1px solid #E4DCC2; display:flex; flex-direction:column; gap:8px;">
+            <span style="font-size:20px; color:#33301A;" data-en="Why is it sometimes sold out?">Kodėl kartais nebūna sandėlyje?</span>
+            <span style="font-size:16px; line-height:1.6; color:#6B6550;" data-en="We ferment in small batches, so on certain days the quantity is limited. Write to us and we will tell you the next batch date.">Rauginame mažomis partijomis, todėl tam tikromis dienomis kiekis ribotas. Parašyk — pasakysime, kada bus artimiausia partija.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>]]&gt;
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1600,&quot;height&quot;:1000}}">
+class Component extends DCLogic {
+  state = { lang: 'lt' };
+
+  applyLang() {
+    const root = this._root;
+    if (!root) return;
+    const en = this.state.lang === 'en';
+    root.querySelectorAll('[data-en]').forEach(el => {
+      if (el.dataset.lt === undefined) el.dataset.lt = el.textContent;
+      const next = en ? el.dataset.en : el.dataset.lt;
+      if (el.textContent !== next) el.textContent = next;
+    });
+  }
+  componentDidMount() { this.applyLang(); }
+  componentDidUpdate() { this.applyLang(); }
+
+  renderVals() {
+    const en = this.state.lang === 'en';
+    return {
+      rootRef: el => { this._root = el; },
+      langLabel: en ? 'LT' : 'EN',
+      toggleLang: () => this.setState(s => ({ lang: s.lang === 'lt' ? 'en' : 'lt' }))
+    };
+  }
+}
+</script>
+</body>
+</html>
